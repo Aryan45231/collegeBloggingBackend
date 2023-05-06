@@ -25,6 +25,11 @@ const getComment=require("./helpers/getComment.js")
 const user=require("./helpers/user.js")
 const valid=require("./helpers/valid.js")
 const getLike=require("./helpers/getLike.js")
+const cors = require("cors")
+app.use(cors({
+  origin:"*",
+  methods:["GET", "POST"]
+}))
 //-------------multer practice-----------
 const multer=require("multer");
 const upload=multer({dest: "./upload/profile"})
